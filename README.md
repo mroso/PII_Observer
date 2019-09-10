@@ -52,8 +52,9 @@ Este es un diagrama de los mensajes intercambiados entre las clases:
 
 ### Desafio
 
-Modifiquen las clases provistas para que exista un tipo `Observable` y otro `Observer` con estas responsabilidades
-de hacer:
+Modifiquen las clases provistas para que exista un tipo `Observable` y otro `Observer` con las responsabilidades
+de hacer que se muestran a continuación. El objetivo es que `TemperatureMonitor` no conozca a `TemperatureReporter`
+sino que pueda reportar los cambios de temperatura a cualquier objeto interesado mientras sea de tipo `Observer`.
 
 #### Observable
 
