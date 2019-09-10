@@ -9,7 +9,7 @@ Código de ejemplo del patrón [Observer](https://en.wikipedia.org/wiki/Observer
 El ejemplo consiste esencialmente de tres clases:
 
 * Temperature
-* TemperatureMonitor
+* TemperatureSensor
 * TemperatureReporter
 
 #### Temperature
@@ -21,7 +21,7 @@ Representa una lectura de un sensor de temperatura
 | Conocer una lectura de temperatura ||
 | Conocer la fecha y hora en que se leyó la temperatura ||
 
-#### TemperatureMonitor
+#### TemperatureSensor
 
 Representa un sensor de temperatura
 
@@ -38,7 +38,7 @@ Representa un dispositivo capaz de mostrar valores (por ejemplo un display de si
 
 | Responsabilidades | Colaboraciones |
 |-------------------|----------------|
-| Conectarse a un monitor de temperatura | TemperatureMonitor |
+| Conectarse a un monitor de temperatura | TemperatureSensor |
 | Desconectarse de un monitor de tempratura ||
 | Recibir actualizaciones del monitor de temperatura ||
 
