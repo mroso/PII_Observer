@@ -55,6 +55,8 @@ Este es un diagrama de los mensajes intercambiados entre las clases:
 Modifiquen las clases provistas para que exista un tipo `IObservable` y otro `IObserver` con las responsabilidades
 de hacer que se muestran a continuación. El objetivo es que `TemperatureSensor` no conozca a `TemperatureReporter`
 sino que pueda reportar los cambios de temperatura a cualquier objeto interesado mientras sea de tipo `IObserver`.
+A la vez `TemperatureReporter` no tiene porqué conocer a `TemperatureSensor` sino que puede reportar los cambios de
+temperatura de cualquier objeto `IObservable` que pueda notificárselos. 
 
 #### IObservable
 
