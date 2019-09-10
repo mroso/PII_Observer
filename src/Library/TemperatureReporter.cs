@@ -1,45 +1,37 @@
 using System;
 
-namespace Observer
+namespace Library
 {
-    public class TemperatureReporter : IObserver<Temperature>
+    public class TemperatureReporter
     {
-        private IDisposable unsubscriber;
-        private bool first = true;
+        private bool first;
         private Temperature last;
+        private TemperatureMonitor provider;
 
-        public virtual void Subscribe(IObservable<Temperature> provider)
+        public void StartReporting(TemperatureMonitor provider)
         {
-            unsubscriber = provider.Subscribe(this);
+            this.provider = provider;
+            this.first = true;
+            this.provider.Subscribe(this);
         }
 
-        public virtual void Unsubscribe()
+        public void StopReporting()
         {
-            unsubscriber.Dispose();
+            this.provider.Unsubscribe(this);
         }
 
-        public virtual void OnCompleted()
+        public void Update()
         {
-            Console.WriteLine("Additional temperature data will not be transmitted.");
-        }
-
-        public virtual void OnError(Exception error)
-        {
-            // Do nothing.
-        }
-
-        public virtual void OnNext(Temperature value)
-        {
-            Console.WriteLine("The temperature is {0}°C at {1:g}", value.Degrees, value.Date);
+            Console.WriteLine($"The temperature is {this.provider.Current.Degrees}°C at {this.provider.Current.Date:g}");
             if (first)
             {
-                last = value;
+                last = this.provider.Current;
                 first = false;
             }
             else
             {
-                Console.WriteLine("   Change: {0}° in {1:g}", value.Degrees - last.Degrees,
-                                                              value.Date.ToUniversalTime() - last.Date.ToUniversalTime());
+                Console.WriteLine($"   Change: {this.provider.Current.Degrees - last.Degrees}° in " +
+                    $"{this.provider.Current.Date.ToUniversalTime() - last.Date.ToUniversalTime():g}");
             }
         }
     }

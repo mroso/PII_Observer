@@ -1,22 +1,32 @@
 using System;
 
-namespace Observer
+namespace Library
 {
     public struct Temperature
     {
-        private decimal temp;
-        private DateTime tempDate;
+        private decimal degrees;
+        private DateTime date;
 
         public Temperature(decimal temperature, DateTime dateAndTime)
         {
-            this.temp = temperature;
-            this.tempDate = dateAndTime;
+            this.degrees = temperature;
+            this.date = dateAndTime;
         }
 
         public decimal Degrees
-        { get { return this.temp; } }
+        {
+            get
+            {
+                return this.degrees;
+            }
+        }
 
         public DateTime Date
-        { get { return this.tempDate; } }
+        {
+            get
+            {
+                return this.date;
+            }
+        }
     }
 }
