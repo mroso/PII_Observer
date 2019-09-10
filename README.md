@@ -45,10 +45,10 @@ Representa un dispositivo capaz de mostrar valores (por ejemplo un display de si
 ### Diagramas
 
 A continuación mostramos esas clases en un diagrama:
-![Diagrama de clases](../master/images/IObserver-Clases.svg?sanitize=true)
+![Diagrama de clases](../master/images/Observer-Clases.svg?sanitize=true)
 
 Este es un diagrama de los mensajes intercambiados entre las clases:
-![Diagrama de interacciones](../master/images/IObserver-Interaciones.svg?sanitize=true)
+![Diagrama de interacciones](../master/images/Observer-Interaciones.svg?sanitize=true)
 
 ### Desafio
 
