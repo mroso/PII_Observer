@@ -63,7 +63,7 @@ observadores a notificar sino que éstos se suscriben a demanda.
 
 | Responsabilidades | Colaboraciones |
 |-------------------|----------------|
-| Conocer los observadores interesados cambios en este objeto | Observer |
+| Conocer los observadores interesados en cambios de este objeto | Observer |
 | Agregar un observador ||
 | Remover un observador previamente agregado ||
 | Notificar cambios en este objeto a los observadores ||
