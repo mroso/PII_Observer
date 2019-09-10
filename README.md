@@ -4,7 +4,7 @@
 
 ### Programación II
 
-Código de ejemplo del patrón [Observer](https://en.wikipedia.org/wiki/Observer_pattern)
+Código de ejemplo del patrón [IObserver](https://en.wikipedia.org/wiki/IObserver_pattern)
 
 El ejemplo consiste esencialmente de tres clases:
 
@@ -45,25 +45,25 @@ Representa un dispositivo capaz de mostrar valores (por ejemplo un display de si
 ### Diagramas
 
 A continuación mostramos esas clases en un diagrama:
-![Diagrama de clases](../master/images/Observer-Clases.svg?sanitize=true)
+![Diagrama de clases](../master/images/IObserver-Clases.svg?sanitize=true)
 
 Este es un diagrama de los mensajes intercambiados entre las clases:
-![Diagrama de interacciones](../master/images/Observer-Interaciones.svg?sanitize=true)
+![Diagrama de interacciones](../master/images/IObserver-Interaciones.svg?sanitize=true)
 
 ### Desafio
 
 Modifiquen las clases provistas para que exista un tipo `IObservable` y otro `IObserver` con las responsabilidades
-de hacer que se muestran a continuación. El objetivo es que `TemperatureMonitor` no conozca a `TemperatureReporter`
+de hacer que se muestran a continuación. El objetivo es que `TemperatureSensor` no conozca a `TemperatureReporter`
 sino que pueda reportar los cambios de temperatura a cualquier objeto interesado mientras sea de tipo `IObserver`.
 
 #### IObservable
 
-Representa un objeto observable que notifica sus cambios a objetos observadores; este objeto no conoce a priori a los
+Representa un objeto IObservable que notifica sus cambios a objetos observadores; este objeto no conoce a priori a los
 observadores a notificar sino que éstos se suscriben a demanda.
 
 | Responsabilidades | Colaboraciones |
 |-------------------|----------------|
-| Conocer los observadores interesados cambios en este objeto | IObserver |
+| Conocer los observadores interesados en cambios de este objeto | IObserver |
 | Agregar un observador ||
 | Remover un observador previamente agregado ||
 | Notificar cambios en este objeto a los observadores ||
