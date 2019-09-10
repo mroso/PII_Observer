@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Library
+namespace Observer
 {
     public class TemperatureMonitor
     {
