@@ -1,14 +1,19 @@
 # Universidad Católica del Uruguay
+
 ## Facultad de Ingeniería y Tecnologías
+
 ### Programación II
+
 Código de ejemplo del patrón [Observer](https://en.wikipedia.org/wiki/Observer_pattern)
 
 El ejemplo consiste esencialmente de tres clases:
+
 * Temperature
 * TemperatureMonitor
 * TemperatureReporter
 
-### Temperature
+#### Temperature
+
 Representa una lectura de un sensor de temperatura
 
 | Responsabilidades | Colaboraciones |
@@ -16,7 +21,8 @@ Representa una lectura de un sensor de temperatura
 | Conocer una lectura de temperatura ||
 | Conocer la fecha y hora en que se leyó la temperatura ||
 
-### TemperatureMonitor
+#### TemperatureMonitor
+
 Representa un sensor de temperatura
 
 | Responsabilidades | Colaboraciones |
@@ -26,7 +32,8 @@ Representa un sensor de temperatura
 | Agregar un reportador interesado ||
 | Remover un reportador previamente agregado ||
 
-### TemperatureReporter
+#### TemperatureReporter
+
 Representa un dispositivo capaz de mostrar valores (por ejemplo un display de siete segmentos o un monitor)
 
 | Responsabilidades | Colaboraciones |
@@ -36,6 +43,7 @@ Representa un dispositivo capaz de mostrar valores (por ejemplo un display de si
 | Recibir actualizaciones del monitor de temperatura ||
 
 ### Diagramas
+
 A continuación mostramos esas clases en un diagrama:
 ![Diagrama de clases](https://github.com/ucudal/PII_Observer_Start/blob/master/images/Observer-Clases.svg?sanitize=true)
 
@@ -43,10 +51,12 @@ Este es un diagrama de los mensajes intercambiados entre las clases:
 ![Diagrama de interacciones](https://github.com/ucudal/PII_Observer_Start/blob/master/images/Observer-Interacciones.svg?sanitize=true)
 
 ### Desafio
+
 Modifiquen las clases provistas para que exista un tipo `Observable` y otro `Observer` con estas responsabilidades
 de hacer:
 
-### Observable
+#### Observable
+
 Representa un objeto observable que notifica sus cambios a objetos observadores; este objeto no conoce a priori a los
 observadores a notificar sino que éstos se suscriben a demanda.
 
@@ -57,7 +67,8 @@ observadores a notificar sino que éstos se suscriben a demanda.
 | Remover un observador previamente agregado ||
 | Notificar cambios en este objeto a los observadores ||
 
-### Observer
+#### Observer
+
 Representa un objeto observador que desea conocer cambios en otro objeto observado
 
 | Responsabilidades | Colaboraciones |
