@@ -9,7 +9,7 @@ Código de ejemplo del patrón [Observer](https://en.wikipedia.org/wiki/Observer
 El ejemplo consiste esencialmente de tres clases:
 
 * Temperature
-* TemperatureMonitor
+* TemperatureSensor
 * TemperatureReporter
 
 #### Temperature
@@ -21,7 +21,7 @@ Representa una lectura de un sensor de temperatura
 | Conocer una lectura de temperatura ||
 | Conocer la fecha y hora en que se leyó la temperatura ||
 
-#### TemperatureMonitor
+#### TemperatureSensor
 
 Representa un sensor de temperatura
 
@@ -38,7 +38,7 @@ Representa un dispositivo capaz de mostrar valores (por ejemplo un display de si
 
 | Responsabilidades | Colaboraciones |
 |-------------------|----------------|
-| Conectarse a un monitor de temperatura | TemperatureMonitor |
+| Conectarse a un monitor de temperatura | TemperatureSensor |
 | Desconectarse de un monitor de tempratura ||
 | Recibir actualizaciones del monitor de temperatura ||
 
@@ -53,7 +53,7 @@ Este es un diagrama de los mensajes intercambiados entre las clases:
 ### Desafio
 
 Modifiquen las clases provistas para que exista un tipo `Observable` y otro `Observer` con las responsabilidades
-de hacer que se muestran a continuación. El objetivo es que `TemperatureMonitor` no conozca a `TemperatureReporter`
+de hacer que se muestran a continuación. El objetivo es que `TemperatureSensor` no conozca a `TemperatureReporter`
 sino que pueda reportar los cambios de temperatura a cualquier objeto interesado mientras sea de tipo `Observer`.
 
 #### Observable

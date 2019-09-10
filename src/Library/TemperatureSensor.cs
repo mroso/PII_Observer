@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Observer
 {
-    public class TemperatureMonitor
+    public class TemperatureSensor
     {
         private List<TemperatureReporter> observers = new List<TemperatureReporter>();
 
