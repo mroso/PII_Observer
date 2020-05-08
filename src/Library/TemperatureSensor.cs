@@ -45,7 +45,7 @@ namespace Observer
                         this.Current = new Temperature(temp.Value, DateTime.Now);
                         foreach (var observer in observers)
                         {
-                            observer.Update();
+                            observer.Update(this.Current);
                         }
                         previous = temp;
                         if (start)

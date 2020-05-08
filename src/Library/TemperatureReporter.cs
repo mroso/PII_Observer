@@ -20,8 +20,8 @@ namespace Observer
             this.provider.Unsubscribe(this);
         }
 
-//El metodo Update que nos obliga a implementar la interzar IObserver ahora recibe una T temperatura
-        public void Update(Temperature Temperature)
+//El metodo Update que nos obliga a implementar la interzar IObserver recibe temperatura de parametro
+        public void Update(Temperature temperature)
         {
             Console.WriteLine($"The temperature is {this.provider.Current.Degrees}°C at {this.provider.Current.Date:g}");
             if (first)
@@ -36,9 +36,5 @@ namespace Observer
             }
         }
 
-        public void Update()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
