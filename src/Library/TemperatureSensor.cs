@@ -10,7 +10,7 @@ namespace Observer
 
         public Temperature Current { get; private set; }
 
-        public void Subscribe(TemperatureReporter observer)
+        public void Subscribe(IObserver observer)
         {
             if (! observers.Contains(observer))
             {
@@ -19,7 +19,7 @@ namespace Observer
         }
 
 
-        public void Unsubscribe(TemperatureReporter observer)
+        public void Unsubscribe(IObserver observer)
         {
             if (observers.Contains(observer))
             {
