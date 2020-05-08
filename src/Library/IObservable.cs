@@ -7,7 +7,13 @@ namespace Observer
 {
     public interface IObservable
     {
-        List <IObserver> observers { get; set; }
+        private List <IObserver> observers 
+        { 
+            get
+            {
+                return this.observers;
+            }
+        }
 
         void Subscribe(IObserver observer)
         {
@@ -17,4 +23,5 @@ namespace Observer
          {
              observers.Remove(observer);
          }
+    }
     }
